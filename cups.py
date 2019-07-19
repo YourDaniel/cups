@@ -126,7 +126,7 @@ def main():
         print(f'Your score: {score}')
         print(f'Level: {level+1}/3')
         start = input(f'Press Enter to start... ')
-        show_ball(ball)
+        show_ball(CUPS.index(ball) + 1)
         time.sleep(1)
         draw_cups()
         time.sleep(0.5)
@@ -134,6 +134,7 @@ def main():
         possible_score = 10 * (level + 1)
         penalty = possible_score // 2
         while True:
+            print(ball, CUPS)
             guess = input("Where's the ball (1, 2, 3)? ")
             while True:
                 if int(guess) not in [1, 2, 3]:
