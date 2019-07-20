@@ -6,9 +6,9 @@ CUPS = [1, 2, 3]
 SWAPS = [(0, 1), (0, 2), (1, 2)]
 ANIMATIONS = ['a', 'b', 'c', 'd', 'e', 'f']
 ANIM_CD = 0.15
-
-
 B = '©'
+
+
 def clear():
     os.system('cls')
 
@@ -40,7 +40,6 @@ def shuffle(n):
     for i in range(n):
         swap_n = randint(0, len(SWAPS) - 1)
         swap(swap_n)
-        # print(CUPS)
         play_animation(swap_n)
 
 
@@ -134,7 +133,6 @@ def main():
         possible_score = 10 * (level + 1)
         penalty = possible_score // 2
         while True:
-            print(ball, CUPS)
             guess = input("Where's the ball (1, 2, 3)? ")
             while True:
                 if int(guess) not in [1, 2, 3]:
